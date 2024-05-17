@@ -1,7 +1,0 @@
-name: 'gcr.io/cloud-builders/gcloud'
-args: ['builds', 'submit', '--tag', 'gcr.io/$PROJECT_ID/my-app', '.']
-name: 'gcr.io/cloud-builders/docker'
-args: ['push', 'gcr.io/$PROJECT_ID/my-app']
-timeout: '1600s'
-images:
-- 'gcr.io/$PROJECT_ID/my-app'
