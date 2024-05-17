@@ -1,7 +1,10 @@
 name: 'gcr.io/cloud-builders/gcloud'
-args: ['builds', 'submit', '--tag', 'gcr.io/TesteQualidade/my-app', '.']
+args: ['builds', 'submit', '--tag', 'gcr.io/testequalidade-422900
+/my-app', '.']
 name: 'gcr.io/cloud-builders/docker'
-args: ['push', 'gcr.io/TesteQualidade/my-app']
+args: ['push', 'gcr.io/testequalidade-422900
+/my-app']
 timeout: '1600s'
 images:
-- 'gcr.io/TesteQualidade/my-app'
+- 'gcr.io/testequalidade-422900
+/my-app'
