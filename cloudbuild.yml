@@ -1,7 +1,15 @@
-name: 'gcr.io/cloud-builders/gcloud'
-args: ['builds', 'submit', '--tag', 'gcr.io/testequalidade-422900/AWS-Java-Test', '.']
-name: 'gcr.io/cloud-builders/docker'
-args: ['push', 'gcr.io/testequalidade-422900/AWS-Java-Test2']
-timeout: '1600s'
+### name: 'gcr.io/cloud-builders/gcloud'
+### args: ['builds', 'submit', '--tag', 'gcr.io/testequalidade-422900/AWS-Java-Test', '.']
+### name: 'gcr.io/cloud-builders/docker'
+# args: ['push', 'gcr.io/testequalidade-422900/AWS-Java-Test2']
+# timeout: '1600s'
+#images:
+#- 'gcr.io/testequalidade-422900/AWS-Java-Test'
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/bq-to-ftp', '.' , '-f', 'Dockerfile']
+  # push the container image to Container Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/$PROJECT_ID/bq-to-ftp']
 images:
-- 'gcr.io/testequalidade-422900/AWS-Java-Test'
+  - 'gcr.io/$PROJECT_ID/bq-to-ftp'
