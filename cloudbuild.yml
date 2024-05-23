@@ -1,7 +1,7 @@
 name: 'gcr.io/cloud-builders/gcloud'
 args: ['builds', 'submit', '--tag', 'gcr.io/testequalidade-422900/AWS-Java-Test', '.']
 name: 'gcr.io/cloud-builders/docker'
-args: ['push', 'gcr.io/testequalidade-422900/AWS-Java-Test']
+args: ['push', 'gcr.io/testequalidade-422900/AWS-Java-Test2']
 timeout: '1600s'
 images:
 - 'gcr.io/testequalidade-422900/AWS-Java-Test'
