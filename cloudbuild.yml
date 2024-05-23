@@ -13,3 +13,4 @@ steps:
     args: ['push', 'gcr.io/$PROJECT_ID/bq-to-ftp']
 images:
   - 'gcr.io/$PROJECT_ID/bq-to-ftp'
+  ##
